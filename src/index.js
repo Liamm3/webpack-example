@@ -8,4 +8,6 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
-console.log('it works!')
+const square = x => x ** 2
+
+console.log(square(4))
