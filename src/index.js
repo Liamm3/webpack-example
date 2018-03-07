@@ -2,7 +2,7 @@ import $ from 'jquery'
 import 'popper.js'
 import 'bootstrap'
 
-import './scss/style.scss'
+import './scss/main.scss'
 
 $(function () {
   $('[data-toggle="popover"]').popover()

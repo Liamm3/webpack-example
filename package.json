@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^8.1.0",
     "bootstrap": "^4.0.0",
     "css-loader": "^0.28.10",
     "file-loader": "^1.1.11",
@@ -22,6 +23,7 @@
     "jquery": "^3.3.1",
     "node-sass": "^4.7.2",
     "popper.js": "^1.12.9",
+    "postcss-loader": "^2.1.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "webpack": "^4.1.0",
