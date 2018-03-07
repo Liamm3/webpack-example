@@ -1,3 +1,2 @@
-import 'ionicons/dist/css/ionicons.min.css'
-import './css/style.css'
+import './scss/style.scss'
 console.log('it works!')
