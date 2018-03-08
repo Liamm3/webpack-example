@@ -15,27 +15,12 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: 'html-loader'
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [
-                require('autoprefixer')
-              ]
-            }
-          },
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: {
+          loader: 'html-loader',
+          options: {
+            minimize: true
+          }
+        }
       },
       {
         test: /\.(png|jpe?g|svg|gif)$/,
@@ -44,7 +29,7 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              bypassOnDebug: true,
+              bypassOnDebug: true
             }
           }
         ]
