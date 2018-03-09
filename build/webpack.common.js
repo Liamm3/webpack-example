@@ -1,7 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
+  entry: {
+    index: './src/js/index.js',
+    contact: './src/js/contact.js'
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, '../dist')
+  },
   module: {
     rules: [
       {
@@ -41,6 +50,18 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new CleanWebpackPlugin(['../dist']),
+    new HtmlWebpackPlugin({
+      title: 'Index',
+      chunks: ['index'],
+      filename: 'index.html',
+      template: './src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Contact',
+      chunks: ['contact'],
+      filename: 'contact.html',
+      template: './src/contact.html'
+    })
   ]
 }
