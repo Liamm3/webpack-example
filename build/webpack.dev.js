@@ -11,16 +11,27 @@ module.exports = merge(
           test: /\.scss$/,
           use: [
             'style-loader',
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {
                 plugins: () => [
                   require('autoprefixer')
-                ]
+                ],
+                sourceMap: true
               }
             },
-            'sass-loader'
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            }
           ]
         },
         {
